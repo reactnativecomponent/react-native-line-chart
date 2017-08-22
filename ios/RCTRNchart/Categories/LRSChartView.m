@@ -10,16 +10,17 @@
 #import "UIImage+Common.h"
 #import "UIButton+EnlargeTouchArea.h"
 #import "UIView+Common.h"
-#import "UIColor+Expanded.h"
+#import "UIColor+expanded.h"
 #import "UIView+BorderLine.h"
 #define btnW 12
-#define titleWOfY 40
+#define titleWOfY 30
 #define TopHight 20
 @interface LRSChartView ()<UIScrollViewDelegate>
 {
     CGFloat currentPage;//当前页数
     CGFloat Xmargin;//X轴方向的偏移
     CGFloat Ymargin;//Y轴方向的偏移
+    CGFloat XlabelMargin;
     CGPoint lastPoint;//最后一个坐标点
     UIButton *firstBtn;
     UIButton *lastBtn;
@@ -96,7 +97,7 @@
 /**  背景网格 */
 -(UIView *)bgView1{
     if (!_bgView1) {
-        _bgView1 = [[UIView alloc]initWithFrame:CGRectMake(5, 0, self.scrollBgView1.bounds.size.width - 40, self.scrollBgView1.bounds.size.height-60)];
+        _bgView1 = [[UIView alloc]initWithFrame:CGRectMake(5, 0, self.scrollBgView1.bounds.size.width - 18, self.scrollBgView1.bounds.size.height-60)];
         _bgView1.layer.masksToBounds = YES;
         //        _bgView1.layer.cornerRadius = 5;
         if (_isShow) {
@@ -104,7 +105,6 @@
              _bgView1.layer.borderColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1].CGColor;
         }
         else{
-           
             [_bgView1 borderForColor: [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1] borderWidth:1.5  borderType:UIBorderSideTypeLeft | UIBorderSideTypeBottom];
         }
         
@@ -463,7 +463,7 @@
         UILabel *leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, i*(Ymargin)+TopHight-Ymargin/2, titleWOfY, Ymargin)];
         leftLabel.font = [UIFont systemFontOfSize:10.0f];
         leftLabel.textColor = [UIColor blackColor];
-        leftLabel.textAlignment = NSTextAlignmentRight;
+        leftLabel.textAlignment = NSTextAlignmentCenter;
         leftLabel.text = leftArr[i];
         [self addSubview:leftLabel];
         
@@ -490,8 +490,7 @@
     }
     
     for (int i = 0;i< bottomArr.count ;i++ ) {
-        
-        UILabel *leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(Xmargin/2+i*Xmargin-10, 6.5*Ymargin, Xmargin*1.5, 20)];
+        UILabel *leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(Xmargin/2+i*Xmargin-10, 6.5*XlabelMargin, Xmargin*1.5, 20)];
         leftLabel.font = [UIFont systemFontOfSize:10.0f];
         leftLabel.textColor = [UIColor blackColor];
         leftLabel.text = bottomArr[i];
@@ -501,7 +500,7 @@
         
     }
     
-    
+   
     _titleOfX = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.scrollBgView1.frame) + 30, CGRectGetMaxY(self.chartScrollView.frame) - 20, 30, 20)];
     _titleOfX.font = [UIFont systemFontOfSize:10.0f];
     _titleOfX.textAlignment = kCTTextAlignmentCenter;
@@ -547,9 +546,10 @@
     CGFloat magrginHeight = (view.bounds.size.height)/ (_tagNum - 1) ;
     CGFloat labelWith = view.bounds.size.width;
     Ymargin = magrginHeight;
+    XlabelMargin =(view.bounds.size.height)/6;
     //    NSLog(@"\n-------magrginHeight-------\n%f",magrginHeight);
     if (_isShow) {
-        for (int i = 0;i<5 ;i++ ) {
+        for (int i = 0;i<_tagNum ;i++ ) {
             
             UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, magrginHeight+magrginHeight *i, labelWith, 1)];
             label.backgroundColor = [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1];

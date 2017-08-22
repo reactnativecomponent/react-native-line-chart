@@ -12,7 +12,7 @@ export default class ZKChartView extends Component {
          * 定义组件需要传到原生端的属性
          * 使用React.PropTypes来进行校验
          */
-        DataArr:PropTypes.array,
+        dataArr:PropTypes.array,
         dataArrOfX:PropTypes.array,
         isShow:PropTypes.bool, //可为空 默认true
         lineColor:PropTypes.string, //可为空 默认0xf38b10
