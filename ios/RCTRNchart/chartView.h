@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LRSChartView.h"
 @interface chartView : UIView
-@property(nonatomic,strong)NSArray *DataArr;
+@property(nonatomic,strong)NSArray *dataArr;
 @property(nonatomic,strong)NSArray *dataArrOfX;
 @property (nonatomic, strong) LRSChartView *incomeChartLineView;
 //折线的颜色

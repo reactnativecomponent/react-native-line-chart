@@ -9,7 +9,7 @@
 #import "chartView.h"
 @implementation chartView
 {
-    NSArray *_DataArr;
+   
     NSArray  *_dataArrOfX;
 }
 
@@ -21,9 +21,9 @@
     return self;
 }
 
--(void)setDataArr:(NSArray *)DataArr{
-    _DataArr  = [NSArray arrayWithArray:DataArr];
-    
+
+-(void)setDataArr:(NSArray *)dataArr{
+      _dataArr  = [NSArray arrayWithArray:dataArr];
 }
 -(void)setDataArrOfX:(NSArray *)dataArrOfX{
     _dataArrOfX = [NSArray arrayWithArray:dataArrOfX];
@@ -82,7 +82,7 @@
     for (int i = 0; i < _tagNum; i++) {
         [dataOfY addObject:[NSString stringWithFormat:@"%.2f",tempMin + i * m]];
     }
-    _incomeChartLineView.leftDataArr = _DataArr;
+    _incomeChartLineView.leftDataArr = _dataArr;
     _incomeChartLineView.dataArrOfY = (NSArray *)[[dataOfY reverseObjectEnumerator] allObjects];//拿到Y轴坐标
     _incomeChartLineView.dataArrOfX = _dataArrOfX;//拿到X轴坐标
     _incomeChartLineView.isShow = _isShow;
