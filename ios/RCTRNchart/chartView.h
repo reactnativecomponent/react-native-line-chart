@@ -1,0 +1,25 @@
+//
+//  chartView.h
+//  RCTEchart
+//
+//  Created by Dowin on 17/1/4.
+//  Copyright © 2017年 Dowin. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "LRSChartView.h"
+@interface chartView : UIView
+@property(nonatomic,strong)NSArray *DataArr;
+@property(nonatomic,strong)NSArray *dataArrOfX;
+@property (nonatomic, strong) LRSChartView *incomeChartLineView;
+//折线的颜色
+@property (nonatomic, copy) NSString *lineColor;
+//渐变图层的颜色
+@property (nonatomic, copy) NSString *layerColor;
+/**默认显示网格  YES*/
+@property(nonatomic,assign)BOOL isShow;
+//详情小方块字体颜色
+@property(nonatomic,strong) NSString *labelTextColor;
+//详情小方框背景颜色
+@property(nonatomic,strong) NSString *labelLayerColor;
+@end

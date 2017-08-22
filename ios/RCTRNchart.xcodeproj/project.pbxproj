@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EC509A31F46E54200F3947C /* LRSChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC509961F46E54200F3947C /* LRSChartView.m */; };
+		4EC509A41F46E54200F3947C /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC509981F46E54200F3947C /* UIButton+EnlargeTouchArea.m */; };
+		4EC509A51F46E54200F3947C /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5099A1F46E54200F3947C /* UIColor+expanded.m */; };
+		4EC509A61F46E54200F3947C /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5099C1F46E54200F3947C /* UIImage+Common.m */; };
+		4EC509A71F46E54200F3947C /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5099E1F46E54200F3947C /* UIView+Common.m */; };
+		4EC509A81F46E54200F3947C /* chartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC509A01F46E54200F3947C /* chartView.m */; };
+		4EC509A91F46E54200F3947C /* charV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC509A21F46E54200F3947C /* charV.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4EC508E91F46D35300F3947C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4EC508EB1F46D35300F3947C /* libRCTRNchart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTRNchart.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EC509951F46E54200F3947C /* LRSChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRSChartView.h; sourceTree = "<group>"; };
+		4EC509961F46E54200F3947C /* LRSChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRSChartView.m; sourceTree = "<group>"; };
+		4EC509971F46E54200F3947C /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
+		4EC509981F46E54200F3947C /* UIButton+EnlargeTouchArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeTouchArea.m"; sourceTree = "<group>"; };
+		4EC509991F46E54200F3947C /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		4EC5099A1F46E54200F3947C /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
+		4EC5099B1F46E54200F3947C /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
+		4EC5099C1F46E54200F3947C /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
+		4EC5099D1F46E54200F3947C /* UIView+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Common.h"; sourceTree = "<group>"; };
+		4EC5099E1F46E54200F3947C /* UIView+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Common.m"; sourceTree = "<group>"; };
+		4EC5099F1F46E54200F3947C /* chartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chartView.h; sourceTree = "<group>"; };
+		4EC509A01F46E54200F3947C /* chartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chartView.m; sourceTree = "<group>"; };
+		4EC509A11F46E54200F3947C /* charV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = charV.h; sourceTree = "<group>"; };
+		4EC509A21F46E54200F3947C /* charV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = charV.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EC508E81F46D35300F3947C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EC508E21F46D35300F3947C = {
+			isa = PBXGroup;
+			children = (
+				4EC508ED1F46D35300F3947C /* RCTRNchart */,
+				4EC508EC1F46D35300F3947C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EC508EC1F46D35300F3947C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EC508EB1F46D35300F3947C /* libRCTRNchart.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EC508ED1F46D35300F3947C /* RCTRNchart */ = {
+			isa = PBXGroup;
+			children = (
+				4EC509941F46E54200F3947C /* Categories */,
+				4EC5099F1F46E54200F3947C /* chartView.h */,
+				4EC509A01F46E54200F3947C /* chartView.m */,
+				4EC509A11F46E54200F3947C /* charV.h */,
+				4EC509A21F46E54200F3947C /* charV.m */,
+			);
+			path = RCTRNchart;
+			sourceTree = "<group>";
+		};
+		4EC509941F46E54200F3947C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4EC509951F46E54200F3947C /* LRSChartView.h */,
+				4EC509961F46E54200F3947C /* LRSChartView.m */,
+				4EC509971F46E54200F3947C /* UIButton+EnlargeTouchArea.h */,
+				4EC509981F46E54200F3947C /* UIButton+EnlargeTouchArea.m */,
+				4EC509991F46E54200F3947C /* UIColor+expanded.h */,
+				4EC5099A1F46E54200F3947C /* UIColor+expanded.m */,
+				4EC5099B1F46E54200F3947C /* UIImage+Common.h */,
+				4EC5099C1F46E54200F3947C /* UIImage+Common.m */,
+				4EC5099D1F46E54200F3947C /* UIView+Common.h */,
+				4EC5099E1F46E54200F3947C /* UIView+Common.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EC508EA1F46D35300F3947C /* RCTRNchart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EC508F41F46D35300F3947C /* Build configuration list for PBXNativeTarget "RCTRNchart" */;
+			buildPhases = (
+				4EC508E71F46D35300F3947C /* Sources */,
+				4EC508E81F46D35300F3947C /* Frameworks */,
+				4EC508E91F46D35300F3947C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCTRNchart;
+			productName = RCTRNchart;
+			productReference = 4EC508EB1F46D35300F3947C /* libRCTRNchart.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EC508E31F46D35300F3947C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Dowin;
+				TargetAttributes = {
+					4EC508EA1F46D35300F3947C = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4EC508E61F46D35300F3947C /* Build configuration list for PBXProject "RCTRNchart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4EC508E21F46D35300F3947C;
+			productRefGroup = 4EC508EC1F46D35300F3947C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EC508EA1F46D35300F3947C /* RCTRNchart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EC508E71F46D35300F3947C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC509A61F46E54200F3947C /* UIImage+Common.m in Sources */,
+				4EC509A91F46E54200F3947C /* charV.m in Sources */,
+				4EC509A71F46E54200F3947C /* UIView+Common.m in Sources */,
+				4EC509A31F46E54200F3947C /* LRSChartView.m in Sources */,
+				4EC509A41F46E54200F3947C /* UIButton+EnlargeTouchArea.m in Sources */,
+				4EC509A51F46E54200F3947C /* UIColor+expanded.m in Sources */,
+				4EC509A81F46E54200F3947C /* chartView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4EC508F21F46D35300F3947C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4EC508F31F46D35300F3947C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EC508F51F46D35300F3947C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4EC508F61F46D35300F3947C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EC508E61F46D35300F3947C /* Build configuration list for PBXProject "RCTRNchart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EC508F21F46D35300F3947C /* Debug */,
+				4EC508F31F46D35300F3947C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EC508F41F46D35300F3947C /* Build configuration list for PBXNativeTarget "RCTRNchart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EC508F51F46D35300F3947C /* Debug */,
+				4EC508F61F46D35300F3947C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EC508E31F46D35300F3947C /* Project object */;
+}
