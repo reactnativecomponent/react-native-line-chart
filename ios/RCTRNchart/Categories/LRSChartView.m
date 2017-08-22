@@ -124,6 +124,7 @@
         _layerColor = @"0xf38b10";
         _labelTextColor = @"0xf38b10";
         _labelLayerColor = @"0xf38b10";
+        _tagNum = 7;
         self.leftPointArr = [NSMutableArray array];
         self.leftBtnArr = [NSMutableArray array];
         self.detailLabelArr = [NSMutableArray array];
@@ -171,6 +172,11 @@
 -(void)setLabelLayerColor:(NSString *)labelLayerColor{
     if (_labelLayerColor != labelLayerColor && labelLayerColor) {
         _labelLayerColor = labelLayerColor;
+    }
+}
+-(void)setTagNum:(NSInteger)tagNum{
+    if (_tagNum != tagNum) {
+        _tagNum = tagNum;
     }
 }
 //*******************数据源************************//
@@ -389,11 +395,16 @@
 //    }
         NSLog(@"\n-------tempMax-------\n%f",tempMax);
     
+    float maxValue = [[_dataArrOfY firstObject] floatValue];
+    float minValue = [[_dataArrOfY lastObject] floatValue];
+    CGFloat valueSpace = maxValue - minValue;
+    
+    
     for (int i = 0; i<arr.count; i++) {
         
-        float tempHeight = [arr[i] floatValue] * 0.8 / tempMax ;
+        float tempHeight = [arr[i] floatValue] - minValue ;
       
-        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake((Xmargin)*i, height *(1 - tempHeight) - btnW/2 , btnW, btnW)];
+        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake((Xmargin)*i, height *(1 - tempHeight/valueSpace) - btnW/2 , btnW, btnW)];
         
         btn.layer.borderColor = [UIColor clearColor].CGColor;
         btn.layer.borderWidth = 1;
@@ -427,7 +438,7 @@
         detailLabel.font = [UIFont systemFontOfSize:12.0f];
         NSString *str = arr[i];
         CGSize textSize = [str boundingRectWithSize:CGSizeMake(200, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16.0]} context:nil].size;;
-        [detailLabel setFrame:CGRectMake((Xmargin)*i-textSize.width/2+btnW/2, height *(1 - tempHeight)-25, textSize.width, textSize.height)];
+        [detailLabel setFrame:CGRectMake((Xmargin)*i-textSize.width/2+btnW/2, height *(1 - tempHeight/valueSpace) - btnW/2 -15, textSize.width, textSize.height)];
         detailLabel.text = str;
         detailLabel.textAlignment = NSTextAlignmentCenter;
         [detailLabel setBackgroundColor:[UIColor colorWithRed:254/255.0 green:247/255.0 blue:237/255.0 alpha:1.0]];
@@ -533,7 +544,7 @@
 
 -(void)addLines1With:(UIView *)view{
   
-    CGFloat magrginHeight = (view.bounds.size.height)/ 6;
+    CGFloat magrginHeight = (view.bounds.size.height)/ (_tagNum - 1) ;
     CGFloat labelWith = view.bounds.size.width;
     Ymargin = magrginHeight;
     //    NSLog(@"\n-------magrginHeight-------\n%f",magrginHeight);

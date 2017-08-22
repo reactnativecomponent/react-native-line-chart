@@ -47,34 +47,50 @@
 
     _lineColor  = lineColor;
 }
+-(void)setMaxValue:(NSString *)maxValue{
+    _maxValue = maxValue;
+}
+-(void)setMinValue:(NSString *)minValue{
+    _minValue = minValue;
+}
+-(void)setTagNum:(NSInteger)tagNum{
+    _tagNum = tagNum;
+}
 -(void)layoutSubviews{
     [super layoutSubviews];
     _incomeChartLineView = [[LRSChartView alloc]initWithFrame:CGRectMake(0, 0, self.bounds.size.width,self.bounds.size.height)];
     //循环拿到收益最大值
-    float tempMax = [_DataArr[0] floatValue];
-    for (int i = 1; i < _DataArr.count; ++i) {
-        if ([_DataArr[i] floatValue] > tempMax) {
-            tempMax = [_DataArr[i] floatValue];
-        }
-    }
-    tempMax =  ceilf(tempMax)+tempMax * 0.25 ;
+//    float tempMax = [_DataArr[0] floatValue];
+//    for (int i = 1; i < _DataArr.count; ++i) {
+//        if ([_DataArr[i] floatValue] > tempMax) {
+//            tempMax = [_DataArr[i] floatValue];
+//        }
+//    }
+//    NSMutableArray *dataOfY = [NSMutableArray array];
+//    float m = tempMax/6;
+//    for (int i = 0; i < 7; i++) {
+//        if (i == 6) {
+//            [dataOfY addObject:[NSString stringWithFormat:@"%.2f",0.0]];
+//        }else{
+//            [dataOfY addObject:[NSString stringWithFormat:@"%.2f",(tempMax - i * [[NSString stringWithFormat:@"%.2f",m] floatValue])]];
+//        }
+//    }
+    float  tempMax =  [_maxValue floatValue];
+    float  tempMin = [_minValue floatValue];
     NSMutableArray *dataOfY = [NSMutableArray array];
-    float m = tempMax/6;
-    for (int i = 0; i < 7; i++) {
-       if (i == 6) {
-            [dataOfY addObject:[NSString stringWithFormat:@"%.2f",0.0]];
-        }else{
-            [dataOfY addObject:[NSString stringWithFormat:@"%.2f",(tempMax - i * [[NSString stringWithFormat:@"%.2f",m] floatValue])]];
-        }
+    float m =( tempMax - tempMin )/(_tagNum - 1);
+    for (int i = 0; i < _tagNum; i++) {
+        [dataOfY addObject:[NSString stringWithFormat:@"%.2f",tempMin + i * m]];
     }
     _incomeChartLineView.leftDataArr = _DataArr;
-    _incomeChartLineView.dataArrOfY = dataOfY;//拿到Y轴坐标
+    _incomeChartLineView.dataArrOfY = (NSArray *)[[dataOfY reverseObjectEnumerator] allObjects];//拿到Y轴坐标
     _incomeChartLineView.dataArrOfX = _dataArrOfX;//拿到X轴坐标
     _incomeChartLineView.isShow = _isShow;
     _incomeChartLineView.lineColor = _lineColor;
     _incomeChartLineView.layerColor = _layerColor;
     _incomeChartLineView.labelTextColor = _labelTextColor;
     _incomeChartLineView.labelLayerColor = _labelLayerColor;
+    _incomeChartLineView.tagNum = _tagNum;
     [self addSubview:_incomeChartLineView];
 
 }

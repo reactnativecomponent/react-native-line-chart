@@ -37,5 +37,6 @@
 @property(nonatomic,strong) NSString *labelTextColor;
 //详情小方框背景颜色
 @property(nonatomic,strong) NSString *labelLayerColor;
-
+//y轴数量分布
+@property(nonatomic,assign) NSInteger tagNum;
 @end

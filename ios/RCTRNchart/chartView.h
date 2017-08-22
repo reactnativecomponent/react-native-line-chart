@@ -22,4 +22,10 @@
 @property(nonatomic,strong) NSString *labelTextColor;
 //详情小方框背景颜色
 @property(nonatomic,strong) NSString *labelLayerColor;
+//y轴坐标最大值
+@property(nonatomic,strong) NSString *maxValue;
+//y轴坐标最小值
+@property(nonatomic,strong) NSString *minValue;
+//y轴显示格子个数
+@property(nonatomic,assign) NSInteger tagNum;
 @end
