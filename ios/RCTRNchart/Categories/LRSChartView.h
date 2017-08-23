@@ -39,4 +39,11 @@
 @property(nonatomic,strong) NSString *labelLayerColor;
 //y轴数量分布
 @property(nonatomic,assign) NSInteger tagNum;
+//连线宽度
+@property(nonatomic,assign) float lineWidth;
+//上层透明度
+@property(nonatomic,assign) float upAlpha;
+//下层透明度
+@property(nonatomic,assign) float downAlpha;
+
 @end

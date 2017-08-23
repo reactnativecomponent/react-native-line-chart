@@ -17,6 +17,11 @@
     self = [super init];
     if (self) {
         _isShow = YES;
+        _maxValue = @"10";
+        _minValue = @"0.0";
+        _lineWidth = 1.0;
+        _upAlpha = 0.1;
+        _downAlpha = 0.0;
     }
     return self;
 }
@@ -56,6 +61,24 @@
 -(void)setTagNum:(NSInteger)tagNum{
     _tagNum = tagNum;
 }
+//连线宽度
+-(void)setLineWidth:(float)lineWidth{
+    if (_lineWidth != lineWidth) {
+        _lineWidth = lineWidth;
+    }
+}
+//上层透明度
+-(void)setUpAlpha:(float)upAlpha{
+    if (_upAlpha != upAlpha) {
+        _upAlpha = upAlpha;
+    }
+}
+//下层透明度
+-(void)setDownAlpha:(float)downAlpha{
+    if (_downAlpha != downAlpha) {
+        _downAlpha = downAlpha;
+    }
+}
 -(void)layoutSubviews{
     [super layoutSubviews];
     _incomeChartLineView = [[LRSChartView alloc]initWithFrame:CGRectMake(0, 0, self.bounds.size.width,self.bounds.size.height)];
@@ -91,6 +114,9 @@
     _incomeChartLineView.labelTextColor = _labelTextColor;
     _incomeChartLineView.labelLayerColor = _labelLayerColor;
     _incomeChartLineView.tagNum = _tagNum;
+    _incomeChartLineView.upAlpha = _upAlpha;
+    _incomeChartLineView.downAlpha = _downAlpha;
+    _incomeChartLineView.lineWidth = _lineWidth;
     [self addSubview:_incomeChartLineView];
 
 }

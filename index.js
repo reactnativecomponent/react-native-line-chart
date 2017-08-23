@@ -21,7 +21,10 @@ export default class ZKChartView extends Component {
         labelLayerColor:PropTypes.string, //可为空 默认0xf38b10
         maxValue:PropTypes.string,  //y轴最大值
         minValue:PropTypes.string, //y轴最小值
-        tagNum:PropTypes.number //y轴分布数
+        tagNum:PropTypes.number, //y轴分布数
+        lineWidth:PropTypes.float,//连线宽度
+        upAlpha:PropTypes.float,//上层透明度
+        downAlpha:PropTypes.float,//下层透明度
     };
     render() {
         return (
