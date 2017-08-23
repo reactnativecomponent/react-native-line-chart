@@ -97,7 +97,7 @@
 /**  背景网格 */
 -(UIView *)bgView1{
     if (!_bgView1) {
-        _bgView1 = [[UIView alloc]initWithFrame:CGRectMake(5, 0, self.scrollBgView1.bounds.size.width -5, self.scrollBgView1.bounds.size.height-60)];
+        _bgView1 = [[UIView alloc]initWithFrame:CGRectMake(5, 0, self.scrollBgView1.bounds.size.width - 18, self.scrollBgView1.bounds.size.height-60)];
         _bgView1.layer.masksToBounds = YES;
         //        _bgView1.layer.cornerRadius = 5;
         if (_isShow) {
@@ -457,8 +457,12 @@
                 sizeH = height *(1 - tempHeight/valueSpace) - btnW/2 -15;
             }
             if (i == 0) {
-                 [detailLabel setFrame:CGRectMake((Xmargin)*i+textSize.width/2-btnW, sizeH, textSize.width, textSize.height)];
-            }else{
+                 [detailLabel setFrame:CGRectMake((Xmargin)*i+textSize.width/2-btnW/2, sizeH, textSize.width,textSize.height)];
+            }
+            if(i == arr.count - 1){
+              [detailLabel setFrame:CGRectMake((Xmargin)*i-textSize.width/2-btnW, sizeH, textSize.width, textSize.height)];
+            }
+           else if(i != 0 && i != arr.count - 1){
                [detailLabel setFrame:CGRectMake((Xmargin)*i-textSize.width/2+btnW/2,sizeH, textSize.width, textSize.height)];
             }
             detailLabel.text = str;
@@ -519,7 +523,7 @@
     if (bottomArr.count != 0 && Xmargin != 0 &&  ![[NSString stringWithFormat:@"%.2f", Xmargin ] isEqualToString:@"inf"] && XlabelMargin) {
         for (int i = 0;i< bottomArr.count ;i++ ) {
 //            UILabel *leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(Xmargin/2+i*Xmargin-10, 6.5*XlabelMargin, Xmargin*1.5, 20)];
-             UILabel *leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(Xmargin/2+i*Xmargin-10, CGRectGetMaxY(self.chartScrollView.frame) - 30, Xmargin*1.5, 20)];
+             UILabel *leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(Xmargin/2+i*Xmargin-10, CGRectGetMaxY(self.chartScrollView.frame) - 30, 40, 20)];
             leftLabel.font = [UIFont systemFontOfSize:10.0f];
             leftLabel.textColor = [UIColor blackColor];
             leftLabel.text = bottomArr[i];
@@ -586,7 +590,7 @@
             [view addSubview:label];
         }
     }
-    CGFloat marginWidth = view.bounds.size.width/_leftDataArr.count;
+    CGFloat marginWidth = view.bounds.size.width/(_leftDataArr.count - 1);
     Xmargin = marginWidth;
     //    NSLog(@"\n-------marginWidth-------\n%f",marginWidth);
     
