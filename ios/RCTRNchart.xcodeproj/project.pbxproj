@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E6EF8AE1F4EADE1000E6A22 /* UIView+BorderLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6EF8AD1F4EADE1000E6A22 /* UIView+BorderLine.m */; };
 		4EC509A31F46E54200F3947C /* LRSChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC509961F46E54200F3947C /* LRSChartView.m */; };
 		4EC509A41F46E54200F3947C /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC509981F46E54200F3947C /* UIButton+EnlargeTouchArea.m */; };
 		4EC509A51F46E54200F3947C /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5099A1F46E54200F3947C /* UIColor+expanded.m */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E6EF8AC1F4EADE1000E6A22 /* UIView+BorderLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BorderLine.h"; sourceTree = "<group>"; };
+		4E6EF8AD1F4EADE1000E6A22 /* UIView+BorderLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderLine.m"; sourceTree = "<group>"; };
 		4EC508EB1F46D35300F3947C /* libRCTRNchart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTRNchart.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC509951F46E54200F3947C /* LRSChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRSChartView.h; sourceTree = "<group>"; };
 		4EC509961F46E54200F3947C /* LRSChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRSChartView.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 		4EC509941F46E54200F3947C /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				4E6EF8AC1F4EADE1000E6A22 /* UIView+BorderLine.h */,
+				4E6EF8AD1F4EADE1000E6A22 /* UIView+BorderLine.m */,
 				4EC509951F46E54200F3947C /* LRSChartView.h */,
 				4EC509961F46E54200F3947C /* LRSChartView.m */,
 				4EC509971F46E54200F3947C /* UIButton+EnlargeTouchArea.h */,
@@ -159,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6EF8AE1F4EADE1000E6A22 /* UIView+BorderLine.m in Sources */,
 				4EC509A61F46E54200F3947C /* UIImage+Common.m in Sources */,
 				4EC509A91F46E54200F3947C /* charV.m in Sources */,
 				4EC509A71F46E54200F3947C /* UIView+Common.m in Sources */,
