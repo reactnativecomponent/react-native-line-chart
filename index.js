@@ -1,9 +1,10 @@
 /**
  * Created by Dowin on 17/1/4.
  */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { requireNativeComponent} from 'react-native';
 var ChartView = requireNativeComponent('charV', ZKChartView);
+import PropTypes from 'prop-types';
 
 export default class ZKChartView extends Component {
     static propTypes = {
